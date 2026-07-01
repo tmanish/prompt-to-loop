@@ -49,10 +49,9 @@ The packaged skill is in [`dist/prompt-to-loop.skill`](dist/prompt-to-loop.skill
 
 **Claude API:** Upload the skill via the Skills API — see the [Skills API quickstart](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
-**Build from source:** The `.skill` format is a zip of the skill folder. Rebuild it with:
+**Build from source:** The `.skill` format is a zip of the skill folder. From the repo root:
 
 ```bash
-cd prompt-to-loop-repo
 zip -r dist/prompt-to-loop.skill prompt-to-loop/
 ```
 
