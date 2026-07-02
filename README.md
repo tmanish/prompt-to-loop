@@ -14,7 +14,7 @@ No technical knowledge needed. Three steps:
 2. **Upload it to Claude.** Open [claude.ai](https://claude.ai), go to **Customize > Skills** (in some versions this appears under **Settings > Capabilities > Skills**), click the **+** button, and upload the file you just downloaded. If the upload dialog only accepts `.zip` files, rename `prompt-to-loop.skill` to `prompt-to-loop.zip` first. The contents are identical.
 3. **Make sure it's switched on.** The skill appears in your skills list with a toggle. Turn it on. Also check that **Code execution and file creation** is enabled in Settings > Capabilities, since skills need it to run.
 
-That's it. You don't need to invoke the skill manually. Just ask Claude to build something ("build me a website for my bakery") and the skill activates on its own. If you want to be explicit, say "use the prompt-to-loop skill" in your message.
+That's it. You don't need to invoke the skill manually. Just ask Claude to build something ("build me a website for my bakery") and the skill activates on its own. To invoke it explicitly, type `/prompt-to-loop` followed by your request, or say "use the prompt-to-loop skill" in your message.
 
 ---
 
@@ -27,7 +27,7 @@ prompt-to-loop closes that gap in two moves:
 1. **Elicit before building.** A handful of multiple-choice questions extracts the decisions that actually shape the output, before a single line is written.
 2. **Build inside a loop.** The work runs as a generate-verify-refine loop (or another archetype) against a concrete check, so the output converges on a stated goal instead of stopping at the first draft.
 
-The result is more useful and refined output and a transparent record of how it was produced.
+The result is more useful output and a transparent record of how it was produced.
 
 ---
 
@@ -57,7 +57,7 @@ The packaged skill is in [`dist/prompt-to-loop.skill`](dist/prompt-to-loop.skill
 
 **Claude apps (claude.ai, desktop, mobile):** Follow the three steps in [How to use](#how-to-use-simplest-way) above. ([Anthropic's skill docs cover the exact current path.](https://support.claude.com/en/articles/12512180-use-skills-in-claude))
 
-**Claude Code:** Place the `prompt-to-loop/` source folder in your skills directory (e.g., `.claude/skills/`). No zip needed; Claude Code reads skills from the filesystem.
+**Claude Code:** Place the `prompt-to-loop/` source folder in your skills directory (e.g., `.claude/skills/`). No zip needed; Claude Code reads skills from the filesystem. Every skill gets a slash command, so you can invoke it explicitly with `/prompt-to-loop` or let Claude trigger it automatically from your request.
 
 **Claude API:** Upload the skill via the Skills API. See the [Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
