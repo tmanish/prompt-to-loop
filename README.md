@@ -172,6 +172,9 @@ Changing defaults here propagates through the whole flow without touching the co
 ├── README.md                         # This file
 ├── LICENSE                           # MIT
 ├── CHANGELOG.md                      # Release history
+├── social-preview.png                # GitHub social preview image (1280x640)
+├── docs/
+│   └── index.html                    # Loop Engineering Lab (GitHub Pages site)
 ├── dist/
 │   └── prompt-to-loop.skill          # Packaged skill, ready to upload
 └── prompt-to-loop/                   # Skill source
