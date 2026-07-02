@@ -27,7 +27,7 @@ prompt-to-loop closes that gap in two moves:
 1. **Elicit before building.** A handful of multiple-choice questions extracts the decisions that actually shape the output, before a single line is written.
 2. **Build inside a loop.** The work runs as a generate-verify-refine loop (or another archetype) against a concrete check, so the output converges on a stated goal instead of stopping at the first draft.
 
-The result is more useful output and a transparent record of how it was produced.
+The result is more useful and refined output and a transparent record of how it was produced.
 
 ---
 
