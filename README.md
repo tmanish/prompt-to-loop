@@ -4,6 +4,8 @@ A Claude skill that turns any vague build prompt into a running agentic loop, wi
 
 You type *"build me a dashboard."* Instead of guessing at a one-shot answer, the skill asks a few sharp multiple-choice questions, picks an appropriate loop shape, runs it against a real verification check, and hands back the artifact plus a log of how it got there.
 
+**New to loop engineering?** The [Loop Engineering Lab](https://tmanish.github.io/prompt-to-loop/) is an interactive primer on the concepts behind this skill: elicitation, verification grounding, convergence, and termination.
+
 ---
 
 ## How to use (simplest way)
