@@ -1,0 +1,10 @@
+# ai.txt — AI training and scraping opt-out
+# Convention per spawning.ai. Advisory: compliant AI crawlers honor it.
+
+User-Agent: *
+Disallow: /
+
+# Explicitly disallow AI training, inference, and search use of all content.
+Disallow-AI-Training: /
+Disallow-AI-Inference: /
+Disallow-AI-Search: /
