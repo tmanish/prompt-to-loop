@@ -1,0 +1,40 @@
+{
+  "name": "prompt-to-loop",
+  "version": "1.0.0",
+  "description": "Install the prompt-to-loop Claude skill into your Claude Code skills directory.",
+  "bin": {
+    "prompt-to-loop": "bin/install.js"
+  },
+  "type": "commonjs",
+  "files": [
+    "bin/",
+    "prompt-to-loop/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "install-skill": "node bin/install.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skill",
+    "agent",
+    "loop",
+    "prompt-to-loop",
+    "anthropic"
+  ],
+  "engines": {
+    "node": ">=16.7.0"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/tmanish/prompt-to-loop#readme",
+  "bugs": {
+    "url": "https://github.com/tmanish/prompt-to-loop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmanish/prompt-to-loop.git"
+  }
+}

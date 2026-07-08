@@ -59,7 +59,19 @@ The packaged skill is in [`dist/prompt-to-loop.skill`](dist/prompt-to-loop.skill
 
 **Claude apps (claude.ai, desktop, mobile):** Follow the three steps in [How to use](#how-to-use-simplest-way) above. ([Anthropic's skill docs cover the exact current path.](https://support.claude.com/en/articles/12512180-use-skills-in-claude))
 
-**Claude Code:** Place the `prompt-to-loop/` source folder in your skills directory (e.g., `.claude/skills/`). No zip needed; Claude Code reads skills from the filesystem. Every skill gets a slash command, so you can invoke it explicitly with `/prompt-to-loop` or let Claude trigger it automatically from your request.
+**Claude Code (npx, one command):** Run the installer straight from GitHub — no clone, no npm publish required:
+
+```bash
+# Install into the current project (./.claude/skills)
+npx github:tmanish/prompt-to-loop
+
+# Install globally, available in every project (~/.claude/skills)
+npx github:tmanish/prompt-to-loop --global
+```
+
+Other flags: `--dir <path>` for a custom skills directory, `--force` to overwrite an existing install, `--help` for the full list. After it finishes, restart Claude Code and invoke with `/prompt-to-loop` (or just ask Claude to build something and it triggers automatically).
+
+**Claude Code (manual):** Place the `prompt-to-loop/` source folder in your skills directory (e.g., `.claude/skills/`). No zip needed; Claude Code reads skills from the filesystem. Every skill gets a slash command, so you can invoke it explicitly with `/prompt-to-loop` or let Claude trigger it automatically from your request.
 
 **Claude API:** Upload the skill via the Skills API. See the [Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
 
@@ -179,6 +191,9 @@ Changing defaults here propagates through the whole flow without touching the co
 │   └── index.html                    # Loop Engineering Lab (GitHub Pages site)
 ├── dist/
 │   └── prompt-to-loop.skill          # Packaged skill, ready to upload
+├── package.json                      # npx installer metadata (bin: prompt-to-loop)
+├── bin/
+│   └── install.js                    # `npx github:tmanish/prompt-to-loop` installer
 └── prompt-to-loop/                   # Skill source
     ├── SKILL.md                      # Core flow and triggering logic
     └── references/

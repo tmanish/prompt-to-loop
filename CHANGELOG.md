@@ -2,6 +2,12 @@
 
 All notable changes to prompt-to-loop are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- `npx` installer for Claude Code: `npx github:tmanish/prompt-to-loop` copies the skill into `./.claude/skills` (or `~/.claude/skills` with `--global`). Supports `--dir`, `--force`, and `--help`. Pure Node, no dependencies, no npm publish required.
+
 ## [1.0.0] - 2026-07-01
 
 Initial public release.
